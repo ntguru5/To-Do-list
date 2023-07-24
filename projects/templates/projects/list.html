@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>List Projects</title>
+</head>
+<body>
+    <main>
+        <div>
+            {% if not list_projects %}
+            <p>You are not assigned to any projects</p>
+            {% endif %}
+            <h1>My Projects</h1>
+            <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number of tasks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for project in list_projects %}
+                        <tr>
+                            <td>{{ project.name }}</td>
+                            <td></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+        </div>
+    </main>
+</body>
+</html>
