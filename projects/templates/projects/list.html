@@ -1,20 +1,18 @@
 {% extends 'base.html' %}
-{% block title %}
-List Projects
-{% endblock title %}
 
+{% block title %}
+    List Projects
+{% endblock title %}
 <body>
     {% block content %}
-    <main>
-        <div>
-            {% if not projects %}
-            <p>You are not assigned to any projects</p>
-            {% endif %}
-            <h1>My Projects</h1>
-            <p>
-                <a href="{% url 'create_project' %}">Create a new project</a>
-            </p>
-            <table>
+        <main>
+            <div>
+                {% if not projects %}<p>You are not assigned to any projects</p>{% endif %}
+                <h1>My Projects</h1>
+                <p>
+                    <a href="{% url 'create_project' %}">Create a new project</a>
+                </p>
+                <table>
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -23,15 +21,17 @@ List Projects
                     </thead>
                     <tbody>
                         {% for project in projects.all %}
-                        <tr>
-                            <td><a href="{% url 'show_project' project.id %}">{{ project.name }}</a></td>
-                            <td>{{ project.name }}</td>
-                            <td>{{ project.tasks.all|length }}</td>
-                        </tr>
+                            <tr>
+                                <td>
+                                    <a href="{% url 'show_project' project.id %}">{{ project.name }}</a>
+                                </td>
+                                <td>{{ project.name }}</td>
+                                <td>{{ project.tasks.all|length }}</td>
+                            </tr>
                         {% endfor %}
                     </tbody>
-             </table>
-        </div>
-    </main>
+                </table>
+            </div>
+        </main>
     {% endblock content %}
 </body>
