@@ -8,10 +8,13 @@
 <body>
     <main>
         <div>
-            {% if not list_projects %}
+            {% if not projects %}
             <p>You are not assigned to any projects</p>
             {% endif %}
             <h1>My Projects</h1>
+            <p>
+                <a href="{% url 'create_project' %}">Create a new project</a>
+            </p>
             <table>
                     <thead>
                         <tr>
@@ -20,10 +23,11 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {% for project in list_projects %}
+                        {% for project in projects.all %}
                         <tr>
+                            <td><a href="{% url 'show_project' project.id %}">{{ project.name }}</a></td>
                             <td>{{ project.name }}</td>
-                            <td></td>
+                            <td>{{ project.tasks.all|length }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
