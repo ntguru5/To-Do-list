@@ -8,9 +8,10 @@
 <body>
     <main>
         <div>
-        <h1>{{ show_project.name }}</h1>
+        <h1>{{ project_detail.name }}</h1>
         <p>{{ project_detail.description }}</p>
         <h2>Tasks</h2>
+        {% if project_detail.tasks.all|length > 0 %}
         <table>
             <thead>
                 <tr>
@@ -33,6 +34,9 @@
                 {% endfor %}
             </tbody>
         </table>
+        {% else %}
+        <p>This project has no tasks</p>
+        {% endif %}
         </div>
     </main>
 </body>
