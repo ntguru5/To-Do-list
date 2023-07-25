@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project detail</title>
-</head>
+{% extends 'base.html' %}
+
+{% block title %}
+Project detail
+{% endblock title %}
+
 <body>
+    {% block content %}
     <main>
         <div>
         <h1>{{ project_detail.name }}</h1>
@@ -42,5 +42,6 @@
         {% endif %}
         </div>
     </main>
+    {% endblock content %}
 </body>
-</html>
+
