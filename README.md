@@ -11,11 +11,11 @@ Team:
 1. Fork this repository
 2. Clone the forked repository to your local computer using: `git clone https://gitlab.com/toranaobrien/project-beta`
 3. From the project directory run the following Docker commands:
-
+```
     docker volume create beta-data
     docker compose build
     docker compose up
-
+```
 ## Design
 Inventory endpoints
 Action                         | Method | URL
