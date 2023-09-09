@@ -10,5 +10,6 @@ Get a specific manufacturer    | GET    | http://localhost:8100/api/manufacturer
 Update a specific manufacturer | PUT    | http://localhost:8100/api/manufacturers/:id/
 Delete a specific manufacturer | DELETE | http://localhost:8100/api/manufacturers/:id/ 
 
+### Diagram
 
 ![alt text goes here](CarCar.png "caption goes here when you hover over image")
