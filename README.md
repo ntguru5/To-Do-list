@@ -64,7 +64,7 @@ Create an automobile         | POST   | http://localhost:8100/api/automobiles/
 Get a specific automobile    | GET    | http://localhost:8100/api/automobiles/:vin/
 Update a specific automobile | PUT    | http://localhost:8100/api/automobiles/:vin/
 Delete a specific automobile | DELETE | http://localhost:8100/api/automobiles/:vin/
-<br/>
+
 Creating a vehicle model requires the model name, a URL of an image, and the id of the manufacturer.
 ```
 {
