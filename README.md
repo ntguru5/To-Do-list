@@ -140,7 +140,7 @@ Delete a specific customer            | DELETE | http://localhost:8090/api/custo
 List sales                            | GET    | http://localhost:8090/api/sales/
 Create a sale                         | POST   | http://localhost:8090/api/sales/
 Delete a sale                         | DELETE | http://localhost:8090/api/sales/:id/
-<br></br>
+
 ## Service microservice
 
 The service microservice consists of three models: An Appointment model, a Technician model, and an AutomobileVO value object model containing vin and sold fields. Technician is a foreign key to the Appointment model.
@@ -149,7 +149,7 @@ The service microservice consists of three models: An Appointment model, a Techn
 
 Explain your models and integration with the inventory
 microservice, here.
-<br></br>
+
 ### Diagram
 
 ![alt text goes here](CarCar.png "caption goes here when you hover over image")
