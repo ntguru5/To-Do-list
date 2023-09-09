@@ -6,7 +6,7 @@ CarCar is an car dealership application to manage your inventory, service, and s
 Team:
 - Ken Yeh - Service Microservice
 - Toran O'Brien - Sales Microservice
-<br/>
+
 ## Getting started
 1. Fork this repository
 2. Clone the forked repository to your local computer using: `git clone https://gitlab.com/toranaobrien/project-beta`
@@ -16,7 +16,7 @@ Team:
     docker compose build
     docker compose up
 ```
-<br></br>
+
 ## Design
 #### Inventory endpoints
 Action                         | Method | URL
@@ -154,3 +154,8 @@ microservice, here.
 
 ![alt text goes here](CarCar.png "caption goes here when you hover over image")
 
+Line one 
+<br>
+<br>
+<br>
+Line two 
