@@ -248,9 +248,66 @@ To create a technician, the POST request will look like example:
 	"employee_id": "kyeh"
 }
 ```
-To delete a specific technician, simply make a DELETE request using the url format http://localhost:8080/api/technicians/**id**/ where "id" is the identifier of the technician
+To delete a specific technician, simply make a DELETE request using the url format http://localhost:8080/api/technicians/id/ where "id" is the identifier of the technician
 
+The list appointments endpoint will give you all the appointments currently scheduled. Since this is a GET request no information is needed. Example of returned data:
+```
+{
+	"appointments": [
+		{
+			"id": 3,
+			"date_time": "2023-09-07T17:53:48+00:00",
+			"reason": "brake service",
+			"status": "finished",
+			"vin": "1J4FJ78L5KL535075",
+			"customer": "Midas",
+			"vip": false,
+			"technician": {
+				"first_name": "Ken",
+				"last_name": "Yeh",
+				"employee_id": "kyeh",
+				"id": 2
+			}
+		}
+	]
+}
+```
 
+Deleting an appointment simply make  DELETE request to http://localhost:8080/api/appointments/id/ where "id" is the identifier of the appointment.
+
+To set an appointment to "canceled" status, make a PUT request to http://localhost:8080/api/appointments/id/cancel/ where "id" is the identifier of the appointment. Example of returned data:
+```
+{
+	"date_time": "2023-09-07T18:43:32+00:00",
+	"reason": "test",
+	"status": "canceled",
+	"vin": "JH4DA9470NS002903",
+	"customer": "TEST",
+	"technician": {
+		"first_name": "Ken",
+		"last_name": "Yeh",
+		"employee_id": "kyeh",
+		"id": 2
+	}
+}
+```
+
+To set an apppointment to "finished" status, make a PUT request to http://localhost:8080/api/appointments/id/finish/ where "id" is the identifier of the appointment. Example of returned data:
+```
+{
+	"date_time": "2023-09-07T17:53:48+00:00",
+	"reason": "brake service",
+	"status": "finished",
+	"vin": "1J4FJ78L5KL535075",
+	"customer": "Midas",
+	"technician": {
+		"first_name": "Ken",
+		"last_name": "Yeh",
+		"employee_id": "kyeh",
+		"id": 2
+	}
+}
+```
 
 #### Sales endpoints
 Action                                | Method | URL
