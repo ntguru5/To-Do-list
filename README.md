@@ -26,7 +26,7 @@ Create a manufacturer          | POST   | http://localhost:8100/api/manufacturer
 Get a specific manufacturer    | GET    | http://localhost:8100/api/manufacturers/:id/
 Update a specific manufacturer | PUT    | http://localhost:8100/api/manufacturers/:id/
 Delete a specific manufacturer | DELETE | http://localhost:8100/api/manufacturers/:id/
-<br/>
+
 Creating and updating a manufacturer requires only the manufacturer's name.
 ```
 {
