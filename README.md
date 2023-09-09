@@ -7,6 +7,7 @@ Team:
 - Ken Yeh - Service Microservice
 - Toran O'Brien - Sales Microservice
 <br>
+<br>
 ## Getting started
 1. Fork this repository
 2. Clone the forked repository to your local computer using: `git clone https://gitlab.com/toranaobrien/project-beta`
