@@ -29,7 +29,7 @@ Delete a specific manufacturer | DELETE | http://localhost:8100/api/manufacturer
 Creating and updating a manufacturer requires only the manufacturer's name.
 ```
 {
-  "name": "Chrysler"
+  "name": "Mazda"
 }
 ```
 The return value of creating, getting, and updating a single manufacturer is its name, href, and id.
@@ -37,7 +37,7 @@ The return value of creating, getting, and updating a single manufacturer is its
 {
   "href": "/api/manufacturers/1/",
   "id": 1,
-  "name": "Chrysler"
+  "name": "Mazda"
 }
 ```
 The list of manufacturers is a dictionary with the key "manufacturers" set to a list of manufacturers.
@@ -47,7 +47,7 @@ The list of manufacturers is a dictionary with the key "manufacturers" set to a 
     {
       "href": "/api/manufacturers/1/",
       "id": 1,
-      "name": "Daimler-Chrysler"
+      "name": "Mazda"
     }
   ]
 }
@@ -65,16 +65,16 @@ Delete a specific automobile | DELETE | http://localhost:8100/api/automobiles/:v
 Creating a vehicle model requires the model name, a URL of an image, and the id of the manufacturer.
 ```
 {
-  "name": "Sebring",
-  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Chrysler_Sebring_front_20090302.jpg/320px-Chrysler_Sebring_front_20090302.jpg",
+  "name": "Mazda 3 Hatchback Turbo",
+  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg/640px-Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg",
   "manufacturer_id": 1
 }
 ```
 Updating a vehicle model can take the name and/or the picture URL. <mark>It is not possible to update a vehicle model's manufacturer.</mark>
 ```
 {
-  "name": "Sebring",
-  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Chrysler_Sebring_front_20090302.jpg/320px-Chrysler_Sebring_front_20090302.jpg"
+  "name": "Mazda 3 Hatchbck Turbo",
+  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg/640px-Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg"
 }
 ```
 Getting the detail of a vehicle model, or the return value from creating or updating a vehicle model, returns the model's information **and** the manufacturer's information.
@@ -82,12 +82,12 @@ Getting the detail of a vehicle model, or the return value from creating or upda
 {
   "href": "/api/models/1/",
   "id": 1,
-  "name": "Sebring",
-  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Chrysler_Sebring_front_20090302.jpg/320px-Chrysler_Sebring_front_20090302.jpg",
+  "name": "Mazda 3 Hatchback Turbo",
+  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg/640px-Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg",
   "manufacturer": {
     "href": "/api/manufacturers/1/",
     "id": 1,
-    "name": "Daimler-Chrysler"
+    "name": "Mazda"
   }
 }
 ```
@@ -98,12 +98,12 @@ Getting a list of vehicle models returns a list of the detail information with t
     {
       "href": "/api/models/1/",
       "id": 1,
-      "name": "Sebring",
-      "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Chrysler_Sebring_front_20090302.jpg/320px-Chrysler_Sebring_front_20090302.jpg",
+      "name": "Mazda 3 Hatchback Turbo",
+      "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg/640px-Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg",
       "manufacturer": {
         "href": "/api/manufacturers/1/",
         "id": 1,
-        "name": "Daimler-Chrysler"
+        "name": "Mazda"
       }
     }
   ]
