@@ -28,14 +28,14 @@ Update a specific manufacturer | PUT    | http://localhost:8100/api/manufacturer
 Delete a specific manufacturer | DELETE | http://localhost:8100/api/manufacturers/:id/
 
 Creating and updating a manufacturer requires only the manufacturer's name.
-```json
+```
 {
   "name": "Mazda"
 }
 ```
 
 The return value of creating, getting, and updating a single manufacturer is its name, href, and id.
-```json
+```
 {
   "href": "/api/manufacturers/1/",
   "id": 1,
@@ -44,7 +44,7 @@ The return value of creating, getting, and updating a single manufacturer is its
 ```
 
 The list of manufacturers is a dictionary with the key "manufacturers" set to a list of manufacturers.
-```json
+```
 {
   "manufacturers": [
     {
@@ -66,7 +66,7 @@ Update a specific vehicle model | PUT    | http://localhost:8100/api/models/:id/
 Delete a specific vehicle model | DELETE | http://localhost:8100/api/models/:id/
 
 Creating a vehicle model requires the model name, a URL of an image, and the id of the manufacturer.
-```json
+```
 {
   "name": "Mazda 3 Hatchback Turbo",
   "picture_url": "http://yourPictureUrl.jpg",
@@ -75,7 +75,7 @@ Creating a vehicle model requires the model name, a URL of an image, and the id 
 ```
 
 Updating a vehicle model can take the name and/or the picture URL. <mark>It is not possible to update a vehicle model's manufacturer.</mark>
-```json
+```
 {
   "name": "Mazda 3 Hatchback Turbo",
   "picture_url": "http://yourPictureUrl.jpg"
@@ -83,7 +83,7 @@ Updating a vehicle model can take the name and/or the picture URL. <mark>It is n
 ```
 
 Getting the detail of a vehicle model, or the return value from creating or updating a vehicle model, returns the model's information **and** the manufacturer's information.
-```json
+```
 {
   "href": "/api/models/1/",
   "id": 1,
@@ -98,7 +98,7 @@ Getting the detail of a vehicle model, or the return value from creating or upda
 ```
 
 Getting a list of vehicle models returns a list of the detail information with the key "models".
-```json
+```
 {
   "models": [
     {
@@ -126,7 +126,7 @@ Update a specific automobile | PUT    | http://localhost:8100/api/automobiles/:v
 Delete a specific automobile | DELETE | http://localhost:8100/api/automobiles/:vin/
 
 You can create an automobile with its color, year, VIN, and the id of the vehicle model.
-```json
+```
 {
   "color": "white",
   "year": 2023,
@@ -139,7 +139,7 @@ You query an automobile by its VIN. For example, you would use the URL
 http://localhost:8100/api/automobiles/1MEFM53S4XA661641/
 
 to get the details for the car with the VIN "1MEFM53S4XA661641". The details for an automobile include its model and manufacturer.
-```json
+```
 {
   "href": "/api/automobiles/1MEFM53S4XA661641/",
   "id": 1,
@@ -162,7 +162,7 @@ to get the details for the car with the VIN "1MEFM53S4XA661641". The details for
 ```
 
 You can update the color, year, and sold status of an automobile.
-```json
+```
 {
   "color": "white",
   "year": 2023,
@@ -171,7 +171,7 @@ You can update the color, year, and sold status of an automobile.
 ```
 
 Getting a list of automobiles returns a dictionary with the key "autos" set to a list of automobile information.
-```json
+```
 {
   "autos": [
     {
