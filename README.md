@@ -147,6 +147,23 @@ The service microservice consists of three models: An Appointment model, a Techn
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Sales microservice
 
 Explain your models and integration with the inventory
