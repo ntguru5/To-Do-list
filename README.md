@@ -226,6 +226,8 @@ Delete a sale                         | DELETE | http://localhost:8090/api/sales
 
 The service microservice consists of three models: An Appointment model, a Technician model, and an AutomobileVO value object model containing vin and sold fields. Technician is a foreign key to the Appointment model.
 
+The AutomobileVO is a value object that gets data about the automobiles in inventory using the __poller.py__ file, which polls every 60 seconds to get updated data.
+
 ## Sales microservice
 
 Explain your models and integration with the inventory
