@@ -16,6 +16,7 @@ Team:
     docker compose build
     docker compose up
 ```
+<br/>
 ## Design
 #### Inventory endpoints
 Action                         | Method | URL
@@ -25,13 +26,14 @@ Create a manufacturer          | POST   | http://localhost:8100/api/manufacturer
 Get a specific manufacturer    | GET    | http://localhost:8100/api/manufacturers/:id/
 Update a specific manufacturer | PUT    | http://localhost:8100/api/manufacturers/:id/
 Delete a specific manufacturer | DELETE | http://localhost:8100/api/manufacturers/:id/
-
+<br/>
 Creating and updating a manufacturer requires only the manufacturer's name.
 ```
 {
   "name": "Mazda"
 }
 ```
+<br/>
 The return value of creating, getting, and updating a single manufacturer is its name, href, and id.
 ```
 {
@@ -40,6 +42,7 @@ The return value of creating, getting, and updating a single manufacturer is its
   "name": "Mazda"
 }
 ```
+<br/>
 The list of manufacturers is a dictionary with the key "manufacturers" set to a list of manufacturers.
 ```
 {
@@ -61,7 +64,7 @@ Create an automobile         | POST   | http://localhost:8100/api/automobiles/
 Get a specific automobile    | GET    | http://localhost:8100/api/automobiles/:vin/
 Update a specific automobile | PUT    | http://localhost:8100/api/automobiles/:vin/
 Delete a specific automobile | DELETE | http://localhost:8100/api/automobiles/:vin/
-
+<br/>
 Creating a vehicle model requires the model name, a URL of an image, and the id of the manufacturer.
 ```
 {
@@ -70,6 +73,7 @@ Creating a vehicle model requires the model name, a URL of an image, and the id 
   "manufacturer_id": 1
 }
 ```
+<br/>
 Updating a vehicle model can take the name and/or the picture URL. <mark>It is not possible to update a vehicle model's manufacturer.</mark>
 ```
 {
@@ -77,6 +81,7 @@ Updating a vehicle model can take the name and/or the picture URL. <mark>It is n
   "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg/640px-Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg"
 }
 ```
+<br/>
 Getting the detail of a vehicle model, or the return value from creating or updating a vehicle model, returns the model's information **and** the manufacturer's information.
 ```
 {
@@ -91,6 +96,7 @@ Getting the detail of a vehicle model, or the return value from creating or upda
   }
 }
 ```
+<br/>
 Getting a list of vehicle models returns a list of the detail information with the key "models".
 ```
 {
@@ -122,7 +128,6 @@ Delete an appointment                     | DELETE | http://localhost:8080/api/a
 Set appointment status to "canceled"      | PUT    | http://localhost:8080/api/appointments/:id/cancel/
 Set appointment status to "finished"      | PUT    | http://localhost:8080/api/appointments/:id/finish/
 
-
 #### Sales endpoints
 Action                                | Method | URL
 --------------------------------------|--------|----------------------------------------
@@ -135,13 +140,11 @@ Delete a specific customer            | DELETE | http://localhost:8090/api/custo
 List sales                            | GET    | http://localhost:8090/api/sales/
 Create a sale                         | POST   | http://localhost:8090/api/sales/
 Delete a sale                         | DELETE | http://localhost:8090/api/sales/:id/
-
-
-
+<br/><br/>
 ## Service microservice
 
 The service microservice consists of three models: An Appointment model, a Technician model, and an AutomobileVO value object model containing vin and sold fields. Technician is a foreign key to the Appointment model.
-<br/><br/><br/><br/>
+
 ## Sales microservice
 
 Explain your models and integration with the inventory
