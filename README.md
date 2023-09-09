@@ -17,7 +17,7 @@ Team:
     docker compose up
 ```
 ## Design
-Inventory endpoints
+####Inventory endpoints
 Action                         | Method | URL
 -------------------------------|--------|-------------------------------------------
 List manufacturers             | GET    | http://localhost:8100/api/manufacturers/
@@ -40,7 +40,17 @@ The return value of creating, getting, and updating a single manufacturer is its
   "name": "Chrysler"
 }
 ```
-
+The list of manufacturers is a dictionary with the key "manufacturers" set to a list of manufacturers.
+{
+  "manufacturers": [
+    {
+      "href": "/api/manufacturers/1/",
+      "id": 1,
+      "name": "Daimler-Chrysler"
+    }
+  ]
+}
+```
 
 
 Automobile endpoints
