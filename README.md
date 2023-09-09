@@ -141,7 +141,7 @@ Delete a sale                         | DELETE | http://localhost:8090/api/sales
 ## Service microservice
 
 The service microservice consists of three models: An Appointment model, a Technician model, and an AutomobileVO value object model containing vin and sold fields. Technician is a foreign key to the Appointment model.
-
+<br/><br/><br/><br/>
 ## Sales microservice
 
 Explain your models and integration with the inventory
