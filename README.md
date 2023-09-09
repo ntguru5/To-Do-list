@@ -16,8 +16,7 @@ Team:
     docker compose build
     docker compose up
 ```
-<br>
-<br>
+<br></br>
 ## Design
 #### Inventory endpoints
 Action                         | Method | URL
