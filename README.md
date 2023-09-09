@@ -56,14 +56,14 @@ The list of manufacturers is a dictionary with the key "manufacturers" set to a 
 }
 ```
 
-#### Automobile endpoints
-Action                       | Method | URL
---------------------------   |--------|-------------------------------------------
-List automobiles             | GET    | http://localhost:8100/api/automobiles/
-Create an automobile         | POST   | http://localhost:8100/api/automobiles/
-Get a specific automobile    | GET    | http://localhost:8100/api/automobiles/:vin/
-Update a specific automobile | PUT    | http://localhost:8100/api/automobiles/:vin/
-Delete a specific automobile | DELETE | http://localhost:8100/api/automobiles/:vin/
+#### Vehicle endpoints
+Action                          | Method | URL
+--------------------------------|--------|-------------------------------
+List vehicle models             | GET    | http://localhost:8100/api/models/
+Create a vehicle model          | POST   | http://localhost:8100/api/models/
+Get a specific vehicle model    | GET    | http://localhost:8100/api/models/:id/
+Update a specific vehicle model | PUT    | http://localhost:8100/api/models/:id/
+Delete a specific vehicle model | DELETE | http://localhost:8100/api/models/:id/
 
 Creating a vehicle model requires the model name, a URL of an image, and the id of the manufacturer.
 ```
@@ -111,6 +111,87 @@ Getting a list of vehicle models returns a list of the detail information with t
         "id": 1,
         "name": "Mazda"
       }
+    }
+  ]
+}
+```
+
+#### Automobile endpoints
+Action                       | Method | URL
+--------------------------   |--------|-------------------------------------------
+List automobiles             | GET    | http://localhost:8100/api/automobiles/
+Create an automobile         | POST   | http://localhost:8100/api/automobiles/
+Get a specific automobile    | GET    | http://localhost:8100/api/automobiles/:vin/
+Update a specific automobile | PUT    | http://localhost:8100/api/automobiles/:vin/
+Delete a specific automobile | DELETE | http://localhost:8100/api/automobiles/:vin/
+
+You can create an automobile with its color, year, VIN, and the id of the vehicle model.
+```
+{
+  "color": "white",
+  "year": 2023,
+  "vin": "1MEFM53S4XA661641",
+  "model_id": 1
+}
+```
+You query an automobile by its VIN. For example, you would use the URL
+
+http://localhost:8100/api/automobiles/1MEFM53S4XA661641/
+
+to get the details for the car with the VIN "1MEFM53S4XA661641". The details for an automobile include its model and manufacturer.
+```
+{
+  "href": "/api/automobiles/1MEFM53S4XA661641/",
+  "id": 1,
+  "color": "yellow",
+  "year": 2023,
+  "vin": "1MEFM53S4XA661641",
+  "model": {
+    "href": "/api/models/1/",
+    "id": 1,
+    "name": "Mazda 3 Hatchback Turbo",
+    "picture_url": "http://yourPictureUrl.jpg",
+    "manufacturer": {
+      "href": "/api/manufacturers/1/",
+      "id": 1,
+      "name": "Mazda"
+    }
+  },
+  "sold": false
+}
+```
+
+You can update the color, year, and sold status of an automobile.
+```
+{
+  "color": "white",
+  "year": 2023,
+  "sold": true
+}
+```
+
+Getting a list of automobiles returns a dictionary with the key "autos" set to a list of automobile information.
+```
+{
+  "autos": [
+    {
+      "href": "/api/automobiles/1MEFM53S4XA661641/",
+      "id": 1,
+      "color": "white",
+      "year": 2023,
+      "vin": "1MEFM53S4XA661641",
+      "model": {
+        "href": "/api/models/1/",
+        "id": 1,
+        "name": "Mazda 3 Hatchback Turbo",
+        "picture_url": "http://yourPictureUrl.jpg",
+        "manufacturer": {
+          "href": "/api/manufacturers/1/",
+          "id": 1,
+          "name": "Mazda"
+        }
+      },
+      "sold": false
     }
   ]
 }
