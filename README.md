@@ -73,7 +73,7 @@ Creating a vehicle model requires the model name, a URL of an image, and the id 
 Updating a vehicle model can take the name and/or the picture URL. <mark>It is not possible to update a vehicle model's manufacturer.</mark>
 ```
 {
-  "name": "Mazda 3 Hatchbck Turbo",
+  "name": "Mazda 3 Hatchback Turbo",
   "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg/640px-Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg"
 }
 ```
