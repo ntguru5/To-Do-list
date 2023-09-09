@@ -209,6 +209,49 @@ Delete an appointment                     | DELETE | http://localhost:8080/api/a
 Set appointment status to "canceled"      | PUT    | http://localhost:8080/api/appointments/:id/cancel/
 Set appointment status to "finished"      | PUT    | http://localhost:8080/api/appointments/:id/finish/
 
+The list technicians endpoint will give you a list of all technicians currently employed. Since this is a GET request no information is needed. Example of returned data:
+```
+{
+	"technicians": [
+		{
+			"first_name": "Mike",
+			"last_name": "Smith",
+			"employee_id": "msmith",
+			"id": 1
+		},
+		{
+			"first_name": "Ken",
+			"last_name": "Yeh",
+			"employee_id": "kyeh",
+			"id": 2
+		},
+		{
+			"first_name": "Jane",
+			"last_name": "Doe",
+			"employee_id": "jdoe",
+			"id": 3
+		},
+		{
+			"first_name": "TEST",
+			"last_name": "TEST",
+			"employee_id": "test",
+			"id": 4
+		}
+	]
+}
+```
+To create a technician, the POST request will look like example:
+```
+{
+	"first_name": "Ken",
+	"last_name": "Yeh",
+	"employee_id": "kyeh"
+}
+```
+To delete a specific technician, simply make a DELETE request using the url format http://localhost:8080/api/technicians/**id**/ where "id" is the identifier of the technician
+
+
+
 #### Sales endpoints
 Action                                | Method | URL
 --------------------------------------|--------|----------------------------------------
