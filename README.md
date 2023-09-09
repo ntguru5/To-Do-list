@@ -13,3 +13,5 @@ Delete a specific manufacturer | DELETE | http://localhost:8100/api/manufacturer
 ### Diagram
 
 ![alt text goes here](CarCar.png "caption goes here when you hover over image")
+
+    code block
