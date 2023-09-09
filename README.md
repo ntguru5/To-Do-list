@@ -17,7 +17,7 @@ Team:
     docker compose up
 ```
 ## Design
-####Inventory endpoints
+#### Inventory endpoints
 Action                         | Method | URL
 -------------------------------|--------|-------------------------------------------
 List manufacturers             | GET    | http://localhost:8100/api/manufacturers/
