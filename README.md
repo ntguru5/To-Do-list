@@ -32,6 +32,14 @@ Creating and updating a manufacturer requires only the manufacturer's name.
   "name": "Chrysler"
 }
 ```
+The return value of creating, getting, and updating a single manufacturer is its name, href, and id.
+```
+{
+  "href": "/api/manufacturers/1/",
+  "id": 1,
+  "name": "Chrysler"
+}
+```
 
 
 
