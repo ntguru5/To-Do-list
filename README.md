@@ -248,7 +248,7 @@ To create a technician, the POST request will look like example:
 	"employee_id": "kyeh"
 }
 ```
-To delete a specific technician, simply make a DELETE request using the url format http://localhost:8080/api/technicians/id/ where "id" is the identifier of the technician.
+To delete a specific technician, simply make a DELETE request to http://localhost:8080/api/technicians/id/ where "id" is the identifier of the technician.
 
 The list appointments endpoint will give you all the appointments currently scheduled. Since this is a GET request no information is needed. Example of returned data:
 ```
