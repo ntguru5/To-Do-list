@@ -150,6 +150,6 @@ The service microservice consists of three models: An Appointment model, a Techn
 Explain your models and integration with the inventory
 microservice, here.
 
-### Diagram
+## Diagram
 
 ![alt text goes here](CarCar.png "caption goes here when you hover over image")
