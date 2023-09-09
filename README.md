@@ -69,7 +69,7 @@ Creating a vehicle model requires the model name, a URL of an image, and the id 
 ```
 {
   "name": "Mazda 3 Hatchback Turbo",
-  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg/640px-Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg",
+  "picture_url": "yourPictureUrl.jpg",
   "manufacturer_id": 1
 }
 ```
@@ -78,7 +78,7 @@ Updating a vehicle model can take the name and/or the picture URL. <mark>It is n
 ```
 {
   "name": "Mazda 3 Hatchback Turbo",
-  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg/640px-Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg"
+  "picture_url": "yourPictureUrl.jpg"
 }
 ```
 
@@ -88,7 +88,7 @@ Getting the detail of a vehicle model, or the return value from creating or upda
   "href": "/api/models/1/",
   "id": 1,
   "name": "Mazda 3 Hatchback Turbo",
-  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg/640px-Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg",
+  "picture_url": "yourPictureUrl.jpg",
   "manufacturer": {
     "href": "/api/manufacturers/1/",
     "id": 1,
@@ -105,7 +105,7 @@ Getting a list of vehicle models returns a list of the detail information with t
       "href": "/api/models/1/",
       "id": 1,
       "name": "Mazda 3 Hatchback Turbo",
-      "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg/640px-Mazda_3_2.0_Fastback_Sport_2023_%288%29.jpg",
+      "picture_url": "yourPictureUrl.jpg",
       "manufacturer": {
         "href": "/api/manufacturers/1/",
         "id": 1,
