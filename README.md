@@ -26,6 +26,14 @@ Get a specific manufacturer    | GET    | http://localhost:8100/api/manufacturer
 Update a specific manufacturer | PUT    | http://localhost:8100/api/manufacturers/:id/
 Delete a specific manufacturer | DELETE | http://localhost:8100/api/manufacturers/:id/
 
+Creating and updating a manufacturer requires only the manufacturer's name.
+```
+{
+  "name": "Chrysler"
+}
+```
+
+
 
 Automobile endpoints
 Action                       | Method | URL
