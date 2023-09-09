@@ -33,7 +33,7 @@ Creating and updating a manufacturer requires only the manufacturer's name.
   "name": "Mazda"
 }
 ```
-
+<br>
 The return value of creating, getting, and updating a single manufacturer is its name, href, and id.
 ```
 {
