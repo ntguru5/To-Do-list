@@ -228,6 +228,8 @@ The service microservice consists of three models: An Appointment model, a Techn
 
 The AutomobileVO is a value object that gets data about the automobiles in inventory using the **_poller.py_** file, which polls every 60 seconds to get updated data.
 
+The Service microservice is integrated with Inventory because when a car is purchased and a customer schedules an appointment, they are flagged as VIP status since the VIN already exists in inventory.
+
 ## Sales microservice
 
 Explain your models and integration with the inventory
