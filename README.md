@@ -322,6 +322,50 @@ List sales                            | GET    | http://localhost:8090/api/sales
 Create a sale                         | POST   | http://localhost:8090/api/sales/
 Delete a sale                         | DELETE | http://localhost:8090/api/sales/:id/
 
+The list salespeople endpoint will give you a list of all salespeople currently employed. Since this is a GET request no information is needed. Example of returned data:
+```
+{
+	"salespeople": [
+		{
+			"first_name": "Toran",
+			"last_name": "O'Brien",
+			"employee_id": "tbrien",
+			"id": 2
+		}
+	]
+}
+```
+
+To create a salesperson, the POST request will look like example:
+```
+{
+	"first_name": "Toran",
+	"last_name": "O'Brien",
+	"employee_id": "tobrien"
+}
+```
+
+The list customers endpoint will give you a list of all customers currently in the system. Since this is a GET request no information is needed. Example of returned data:
+```
+{
+	"customers": [
+		{
+			"first_name": "Homer",
+			"last_name": "Simpson",
+			"address": "742 Evergreen Terrace Springfield, NT 94007",
+			"phone_number": "1231234567",
+			"id": 1
+		}
+	]
+}
+```
+
+GOT STUCK HERE TORAN
+
+To delete a customer simply make a DELETE request to http://localhost:8090/api/customers/:id/ where "id" is the identifier of the customer.
+
+GOT STUCK HERE TORAN
+
 ## Service microservice
 
 The service microservice consists of three models: An Appointment model, a Technician model, and an AutomobileVO value object model containing vin and sold fields. Technician is a foreign key to the Appointment model.
