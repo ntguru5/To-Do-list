@@ -118,7 +118,7 @@ Getting a list of vehicle models returns a list of the detail information with t
 
 #### Automobile endpoints
 Action                       | Method | URL
---------------------------   |--------|-------------------------------------------
+-----------------------------|--------|-------------------------------------------
 List automobiles             | GET    | http://localhost:8100/api/automobiles/
 Create an automobile         | POST   | http://localhost:8100/api/automobiles/
 Get a specific automobile    | GET    | http://localhost:8100/api/automobiles/:vin/
@@ -387,4 +387,4 @@ microservice, here.
 
 ## Diagram
 
-![alt text goes here](CarCar.png "caption goes here when you hover over image")
+![alt text goes here](CarCar.png "caption text goes here when you hover over image")
