@@ -360,11 +360,11 @@ The list customers endpoint will give you a list of all customers currently in t
 }
 ```
 
-GOT STUCK HERE TORAN
+GOT STUCK HERE TORAN CREATING A CUSTOMER
 
 To delete a customer simply make a DELETE request to http://localhost:8090/api/customers/:id/ where "id" is the identifier of the customer.
 
-GOT STUCK HERE TORAN
+GOT STUCK HERE TORAN WITH THE SALE SECTION
 
 ## Service microservice
 
